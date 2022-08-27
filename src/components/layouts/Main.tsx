@@ -1,6 +1,7 @@
+import { useTheme } from "next-themes";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 
 type MainLayout = {
@@ -19,7 +20,7 @@ const Main: React.FC<MainLayout> = ({ children }) => {
   };
 
   return (
-    <div className="bg-slate-200 dark:bg-slate-800">
+    <div className="bg-slate-200 dark:bg-slate-900">
       <Head>
         <title>{meta.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
